@@ -12,6 +12,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "postgres://vsjuninh:syqcGjU2ZkhYpmJLEIUBIct_nb6NcPpa@balarama.db.elephantsql.com:5432/vsjuninh"
+    "use_env_variable": "DATABASE_URL"
   }
 }
