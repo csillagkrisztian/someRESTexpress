@@ -2,19 +2,20 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert(
-      "users",
-      [
-        {
-          name: "John Doe",
-          email: "lube@gmail.com",
-          phone: 381635123,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-      ],
-      {}
-    );
+    await queryInterface.bulkInsert("itemTags", [
+      {
+        todoItemId: "1",
+        tagId: "1",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        todoItemId: "2",
+        tagId: "2",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ]);
     /**
      * Add seed commands here.
      *
@@ -27,7 +28,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("users", null, {});
+    await queryInterface.bulkDelete("itemTags");
     /**
      * Add commands to revert seed here.
      *
